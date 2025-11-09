@@ -12,22 +12,33 @@
       width: 200px; /* adjust popup width */
       height: 200px; /* adjust popup height */
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background-color: #f0f0f0;
+      text-align: center;
     }
     img {
       max-width: 100%;
-      max-height: 100%;
+      max-height: 100px;
       border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    #buddy-quote {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <img src="/img/cat.png" alt="Cute Cat">
-   <script src="quotes.js"></script>
-    <script>
-    // Call the function to get a random quote
+  <img src="img/cat.png" alt="Cute Cat">
+  <div id="buddy-quote"></div>
+
+  <!-- Include the quotes JS file -->
+  <script src="quotes.js"></script>
+  <script>
+    // Display a random quote from quotes.js
     document.getElementById('buddy-quote').textContent = getRandomQuote();
   </script>
 </body>
