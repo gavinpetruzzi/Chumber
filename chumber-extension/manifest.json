@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Beautiful Soup HTML Parser Extension",
+    "version": "1.0",
+    "description": "Test",
+    "action": {
+      "default_popup": "/chumber-extension/index.html",
+      "default_icon": "/chumber-extension/img/cat.png"
+    },
+    "permissions": ["scripting", "activeTab"],
+    "icons": {
+      "16": "/chumber-extension/img/cat.png"
+    }
+  }
