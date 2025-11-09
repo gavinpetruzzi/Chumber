@@ -1,57 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Parser</title>
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
-    <link rel="stylesheet" href="../static/style.css"> 
-    <!-- Stylesheet for chrome extension-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buddy Popup</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      width: 200px; /* adjust popup width */
+      height: 200px; /* adjust popup height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>HTML Parser</h1>
-        <div>
-            <label for="htmlInput"><strong>Enter HTML to parse:</strong></label>
-            <textarea id="htmlInput" placeholder="<div><p>Enter your HTML here</p></div>"></textarea>
-            <button onclick="parseHTML()">Parse HTML</button>
-        </div>
-        <h3>Result:</h3>
-        <pre id="result">Parsed content will appear here</pre>
-    </div>
-
-    <script>
-        async function parseHTML() {
-            const resultElement = document.getElementById('result');
-            const htmlInput = document.getElementById('htmlInput').value;
-            
-            if (!htmlInput) {
-                resultElement.innerHTML = '<span class="error">Please enter some HTML to parse</span>';
-                return;
-            }
-            
-            try {
-                resultElement.textContent = 'Processing...';
-                
-                const response = await fetch('/parse', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ input: htmlInput })
-                });
-                
-                const data = await response.json();
-                
-                if (response.ok) {
-                    resultElement.textContent = data.output;
-                } else {
-                    resultElement.innerHTML = `<span class="error">Error: ${data.error}</span>`;
-                }
-            } catch (error) {
-                resultElement.innerHTML = `<span class="error">Network error: ${error.message}</span>`;
-            }
-        }
-    </script>
+  <img src="/img/cat.png" alt="Cute Cat">
 </body>
 </html>
