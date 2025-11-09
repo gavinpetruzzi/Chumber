@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "Test",
     "action": {
-      "default_popup": "/chumber-extension/index.html",
+      "default_popup": "/index.html",
       "default_icon": "/img/cat.png"
     },
     "permissions": ["scripting", "activeTab"],
