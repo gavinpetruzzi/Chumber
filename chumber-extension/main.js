@@ -1,0 +1,1 @@
+document.getElementById('buddy-quote').textContent = getRandomQuote();
