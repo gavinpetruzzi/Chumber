@@ -19,7 +19,7 @@ Whether you're debugging your 14th JavaScript error or procrastinating your 3rd 
 1. Clone this repo:
 
    ```bash
-   git clone https://github.com/gavinpetruzzi/chumber.git
+   git clone https://github.com/gavinpetruzzi/ChumberTheCat.git
    ```
 2. Open **Chrome** → navigate to **chrome://extensions**.
 3. Enable **Developer Mode** (top right).
